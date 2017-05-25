@@ -1,10 +1,10 @@
-web:
-  build: ./web
+api:
+  build: ./flask-app
   command: python -u /web-app/app.py
   ports:
     - "5000:5000"
   volumes:
-    - ./web-app:/web-app
+    - ./flask-app:/web-app
   links:
     - db
 db:
